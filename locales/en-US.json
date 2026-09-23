@@ -1,0 +1,4 @@
+{
+  "displayName": "Java Lab Report",
+  "brief": "Generate OOP-style Java lab reports from the course template and remember your student profile. Invoke with /java-report"
+}

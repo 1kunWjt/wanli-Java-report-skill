@@ -1,0 +1,35 @@
+{
+  "school_name": "浙江万里学院",
+  "course_name": "面向对象程序设计",
+  "lab_name": "实验二 简单Java程序设计",
+  "class_name": "通信101",
+  "student_name": "张三",
+  "student_id": "2025000001",
+  "lab_date": "2026.09.23",
+  "purpose": "1.熟悉java的基本数据类型与操作符号\n2.熟悉java程序设计的基本方法",
+  "content_summary": "实验1：定义整型一维数组k[6]，初始化k[i]=i，打印k[3]。\n实验2：定义整型二维数组k[3][4]，初始化k[i][j]=i*j，打印k[2][3]。\n实验3：从命令行输入几个字符串，统计并打印出输入字符串的个数、以及各字符串的字符个数。",
+  "problems": [
+    {
+      "title": "实验1：定义一个整型的长度为6的一维数组k[6]，并将数组中元素k[i]值初始化为i。然后，将元素k[3]打印出来。",
+      "thinking": "先声明一个长度为6的int数组，下标从0到5。接着用for循环把k[i]赋成i，这样每个位置的值刚好等于下标。题目要打印k[3]，直接取下标3输出就行，不用再算。",
+      "code": "public class t1 {\n    public static void main(String[] args) {\n        int[] k;\n        k = new int[6];\n        for (int i = 0; i < 6; i++)\n            k[i] = i;\n        System.out.println(k[3]);\n    }\n}",
+      "run_hint": "java t1",
+      "screenshots": []
+    },
+    {
+      "title": "实验2：定义一个整型的长度为3 x 4的二维数组k[3][4]，并将数组中元素k[i][j]值初始化为值ixj。然后，将元素k[2][3]打印出来。",
+      "thinking": "二维数组按3行4列来开，行号i从0到2，列号j从0到3。初始化时外层循环管行、内层循环管列，把k[i][j]赋成i*j。要输出的是k[2][3]，也就是第3行第4列，代入公式2*3=6，直接打印这个元素即可。",
+      "code": "public class t2 {\n    public static void main(String[] args) {\n        int[][] k;\n        k = new int[3][4];\n        for (int i = 0; i < 3; i++)\n            for (int j = 0; j < 4; j++)\n                k[i][j] = i * j;\n        System.out.println(k[2][3]);\n    }\n}",
+      "run_hint": "java t2",
+      "screenshots": []
+    },
+    {
+      "title": "实验3：从命令行输入几个字符串，统计并打印出输入字符串的个数、以及各字符串的字符个数。",
+      "thinking": "命令行参数都放在args数组里，个数就是args.length。然后再遍历一遍，对每个字符串调用length()就能拿到字符个数。一边循环一边打印序号和长度，最后把总个数也打出来，方便对照。",
+      "code": "public class t3 {\n    public static void main(String[] args) {\n        System.out.println(\"输入字符串的个数: \" + args.length);\n        for (int k = 0; k < args.length; k++)\n            System.out.println(args[k] + \" 的字符个数: \" + args[k].length());\n    }\n}",
+      "run_hint": "java t3 hello java world",
+      "screenshots": []
+    }
+  ],
+  "summary": "这次实验把数组、命令行参数和基本运算又串了一遍。一开始容易忘记args拿到的都是字符串，数字题必须先用Integer.parseInt转换；二维数组则要注意两层循环的下标范围别写成<=。通过自己写代码并观察输出，对Java程序的编写流程更熟了，也更清楚数据类型和运算符在实际题目里怎么配合使用。"
+}
